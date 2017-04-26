@@ -1,0 +1,41 @@
+Purpose:
+The input file contains order data: each order line can contain up to 4 items' prices, tab seperated, 
+
+together with some other order related data, in the following format:
+order-id:date	user_id	item_price_1	item_price_2	item_price_3	item_price_4	start_page_url
+
+The requirements are:
+1) Parse each order line to sepaerate order-id and order-date
+2) Calculate the average item price
+3) Validate the url field
+4) Produce simple output in the following format, tab seperated:
+order-id date user-id average-item-price valid-url error-message
+
+How to Run:
+phthon ic_report.py -f <file-name-in-same-directory>
+The output displays in stdout
+
+Run output:
+jmeng-4848:test jmeng$ python ic_report.py -f scripting_challenge_input_file.txt 
+54374	2015-05-01	123	7.5	http://www.mycompany.com/favorites	
+54356	2015-05-01	124	32.325	http://www.mycompany.com/favorites	
+54234	2015-05-01	123	27.8	http://www.mycompany.com/favorites	
+54375	2015-05-01	134	20.15	http://www.mycompany.com/	
+54376	2015-05-01	126	9.375	http://www.mycompany.com/	
+12094	2015-05-01	123	7.225	http://www.mycompany.com	
+54324	2015-05-01	129	8.4625	http://www.mycompany.com/	
+54374	2015-05-01	125	36.4225	http://www.mycompany.com/	
+54564	2015-05-01	126	12.4	http://www.mycompany.com/:q!	
+54884	2015-05-03	127	7.7475	http://www.mycompany.com/favorites	
+44374	2015-05-01	128	16.15	http://www.mycompany.com/favorites	
+34374	2015-05-01	129	0.0		invliad url
+54004	2015-05-03	129	27.2		invliad url
+54974	2015-05-03	120	7.675		invliad url
+54374	2015-05-01	345	2.0	http://www.mycompany.com/cart	
+52374	2015-04-01	5678	10.4175		invliad url
+4374	2015-05-01	123	5.44	http://www.mycompany.com/favorites	
+		423	10.4475	http://www.mycompany.com/favorites	no id/date
+54374	2015-05-01	424	5.4375	http://www.mycompany.com/search	
+549374	2015-05-01	325	22.5	http://www.mycompany.com/favorites	
+54334	2015-05-01	428	20.0	http://www.mycompany.com/search	
+50374	2015-05-01	429	250.0	http://www.mycompany.com/
