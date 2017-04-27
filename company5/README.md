@@ -53,6 +53,7 @@ Data initiated in database
 curl -i -H "Content-Type: application/json" http://localhost:5000/selectall
 
 ### Display store data for a given store id
+```
 curl -i -H "Content-Type: application/json" http://localhost:5000/select/<store-id>
 
 Example:
@@ -89,7 +90,9 @@ Date: Thu, 27 Apr 2017 21:13:11 GMT
 ```
 
 ### Delete a store from database for a given store id
+```
 curl -i -H "Content-Type: application/json" http://localhost:5000/delete/<store-id>
+```
 
 Example:
 ```
@@ -109,8 +112,9 @@ Date: Thu, 27 Apr 2017 21:16:52 GMT
 ```
 
 ### Update store data for a given store id
+```
 curl -i -H "Content-Type: application/json" -X POST -d '<store-data-in-json>' http://localhost:5000/update/<store-id>
-
+```
 Example:
 ```
 jmeng$ curl -i -H "Content-Type: application/json" -X POST -d '{"address":"6 moraga way", "name":"new name"}' http://localhost:5000/update/1
@@ -140,7 +144,9 @@ Date: Thu, 27 Apr 2017 21:26:50 GMT
 ```
 
 ### Find the nearest shop for a given address
+```
 curl -i -H "Content-Type: application/json" -X POST -d '{"address":"<address>"}' http://localhost:5000/find_nearest
+```
 
 Example:
 ```
