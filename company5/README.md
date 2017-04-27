@@ -1,4 +1,4 @@
-Project
+## Project
 
 The goal of this project is to create an API for finding the nearest g shop by providing an
 address.
@@ -26,13 +26,13 @@ Accepts an id and deletes the g shop with that id, or returns an error if it is 
 Find nearest:
 Accepts an address and returns the closest g shop by straight line distance.
 
-Installation
+## Installation
 
 The following python libraries need to be pre-installed:
 1. pip install flask
 2. pip install geopy
 
-Start the Server
+## Start the Server
 
 python iserver.py -f <text-file-with-store-information>
 
@@ -47,7 +47,7 @@ Data initiated in database
  * Debugger PIN: 516-434-060
 
 
-REST API
+## REST API
 
 1) Display all store data in the database
 curl -i -H "Content-Type: application/json" http://localhost:5000/selectall
