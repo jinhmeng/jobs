@@ -49,13 +49,14 @@ Data initiated in database
 
 ## REST API
 
-1) Display all store data in the database
+### Display all store data in the database
 curl -i -H "Content-Type: application/json" http://localhost:5000/selectall
 
-2) Display store data for a given store id
+### Display store data for a given store id
 curl -i -H "Content-Type: application/json" http://localhost:5000/select/<store-id>
 
 Example:
+
 jmeng$ curl -i -H "Content-Type: application/json" http://localhost:5000/select/10
 HTTP/1.0 200 OK
 Content-Type: application/json
@@ -85,10 +86,11 @@ Date: Thu, 27 Apr 2017 21:13:11 GMT
   "message": "not found"
 }
 
-3) Delete a store from database for a given store id
+### Delete a store from database for a given store id
 curl -i -H "Content-Type: application/json" http://localhost:5000/delete/<store-id>
 
 Example:
+
 jmeng$ curl -i -H "Content-Type: application/json" http://localhost:5000/delete/1
 
 HTTP/1.0 200 OK
@@ -103,10 +105,11 @@ Date: Thu, 27 Apr 2017 21:16:52 GMT
   "old_db_count": 48
 }
 
-4) Update store data for a given store id
+### Update store data for a given store id
 curl -i -H "Content-Type: application/json" -X POST -d '<store-data-in-json>' http://localhost:5000/update/<store-id>
 
 Example:
+
 jmeng$ curl -i -H "Content-Type: application/json" -X POST -d '{"address":"6 moraga way", "name":"new name"}' http://localhost:5000/update/1
 HTTP/1.0 200 OK
 Content-Type: application/json
@@ -132,10 +135,11 @@ Date: Thu, 27 Apr 2017 21:26:50 GMT
   }
 }
 
-5) Find the nearest shop for a given address
+### Find the nearest shop for a given address
 curl -i -H "Content-Type: application/json" -X POST -d '{"address":"<address>"}' http://localhost:5000/find_nearest
 
 Example:
+
 jmeng$ curl -i -H "Content-Type: application/json" -X POST -d '{"address":"252 Guerrero St, San Francisco, CA 94103"}' http://localhost:5000/find_nearest
 HTTP/1.0 200 OK
 Content-Type: application/json
