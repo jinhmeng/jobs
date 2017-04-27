@@ -55,7 +55,7 @@ curl -i -H "Content-Type: application/json" http://localhost:5000/selectall
 ### Display store data for a given store id
 ```
 curl -i -H "Content-Type: application/json" http://localhost:5000/select/<store-id>
-
+```
 Example:
 ```
 jmeng$ curl -i -H "Content-Type: application/json" http://localhost:5000/select/10
