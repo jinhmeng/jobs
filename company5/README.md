@@ -37,7 +37,7 @@ The following python libraries need to be pre-installed:
 python iserver.py -f <text-file-with-store-information>
 
 Example:
-
+```
 jmeng$ python iserver.py -f location.csv
 Data initiated in database
  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
@@ -45,7 +45,7 @@ Data initiated in database
 Data initiated in database
  * Debugger is active!
  * Debugger PIN: 516-434-060
-
+```
 
 ## REST API
 
@@ -56,7 +56,7 @@ curl -i -H "Content-Type: application/json" http://localhost:5000/selectall
 curl -i -H "Content-Type: application/json" http://localhost:5000/select/<store-id>
 
 Example:
-
+```
 jmeng$ curl -i -H "Content-Type: application/json" http://localhost:5000/select/10
 HTTP/1.0 200 OK
 Content-Type: application/json
@@ -74,7 +74,8 @@ Date: Thu, 27 Apr 2017 21:11:23 GMT
   }, 
   "message": "found"
 }
-
+```
+```
 jmeng$ curl -i -H "Content-Type: application/json" http://localhost:5000/select/100
 HTTP/1.0 200 OK
 Content-Type: application/json
@@ -85,12 +86,13 @@ Date: Thu, 27 Apr 2017 21:13:11 GMT
 {
   "message": "not found"
 }
+```
 
 ### Delete a store from database for a given store id
 curl -i -H "Content-Type: application/json" http://localhost:5000/delete/<store-id>
 
 Example:
-
+```
 jmeng$ curl -i -H "Content-Type: application/json" http://localhost:5000/delete/1
 
 HTTP/1.0 200 OK
@@ -104,12 +106,13 @@ Date: Thu, 27 Apr 2017 21:16:52 GMT
   "new_db_count": 47, 
   "old_db_count": 48
 }
+```
 
 ### Update store data for a given store id
 curl -i -H "Content-Type: application/json" -X POST -d '<store-data-in-json>' http://localhost:5000/update/<store-id>
 
 Example:
-
+```
 jmeng$ curl -i -H "Content-Type: application/json" -X POST -d '{"address":"6 moraga way", "name":"new name"}' http://localhost:5000/update/1
 HTTP/1.0 200 OK
 Content-Type: application/json
@@ -134,12 +137,13 @@ Date: Thu, 27 Apr 2017 21:26:50 GMT
     "name": "Equator Coffees & Teas"
   }
 }
+```
 
 ### Find the nearest shop for a given address
 curl -i -H "Content-Type: application/json" -X POST -d '{"address":"<address>"}' http://localhost:5000/find_nearest
 
 Example:
-
+```
 jmeng$ curl -i -H "Content-Type: application/json" -X POST -d '{"address":"252 Guerrero St, San Francisco, CA 94103"}' http://localhost:5000/find_nearest
 HTTP/1.0 200 OK
 Content-Type: application/json
@@ -158,4 +162,4 @@ Date: Thu, 27 Apr 2017 22:12:13 GMT
     "name": "Four Barrel Coffee"
   }
 }
-
+```
