@@ -33,9 +33,9 @@ The following python libraries need to be pre-installed:
 2. pip install geopy
 
 ## Start the Server
-
+```
 python iserver.py -f <text-file-with-store-information>
-
+```
 Example:
 ```
 jmeng$ python iserver.py -f location.csv
